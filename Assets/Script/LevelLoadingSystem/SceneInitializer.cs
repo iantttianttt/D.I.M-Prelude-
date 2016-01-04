@@ -7,12 +7,11 @@ namespace DIM {
 		
 		public class SceneInitializer : MonoBehaviour {
 
-			IEnumerator Start(){
+			IEnumerator Start () {
 
 				yield return new WaitForSeconds(3);
 
-				SceneManager.ins.StartLoadTargetScene();
-
+				GameSceneManager.ins.LoadOwnScene();
 			}
 		}
 

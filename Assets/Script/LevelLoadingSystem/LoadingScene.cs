@@ -10,7 +10,7 @@ namespace DIM {
 
 				yield return new WaitForSeconds(3);
 
-				SceneManager.ins.StartLoadTargetScene();
+				GameSceneManager.ins.StartLoadTargetScene();
 			}
 
 		}

@@ -27,7 +27,7 @@ namespace DIM {
 
 					ins = this;
 					GameObject.DontDestroyOnLoad(gameObject);
-					SceneManager.ins.OwnSecne = (int)this.curSceneName;
+					GameSceneManager.ins.OwnSecne = (int)this.curSceneName;
 
 				}else if(ins != this){
 
@@ -36,8 +36,7 @@ namespace DIM {
 			}
 
 			public void LoadLevel(Scenes target){
-
-				SceneManager.ins.LoadScene((int)target);
+				GameSceneManager.ins.LoadScene((int)target);
 			}
 		}
 	}
