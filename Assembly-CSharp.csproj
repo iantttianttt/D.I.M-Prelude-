@@ -93,6 +93,11 @@
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\GUIT_Button_Simple.cs" />
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\GUIText_Color.cs" />
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\TGPDemo.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\LoadingScene.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\SceneInitializer.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\SceneLoader.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\SceneManager.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\SceneNames.cs" />
      <None Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Shaders\TGP_Bump_Rim_OneLight.shader" />
      <None Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_OneLight.shader" />
      <None Include="Assets\PlugIn\Particle Playground\Graphics\Shaders\VertexLit Color.shader" />
