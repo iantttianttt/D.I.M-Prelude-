@@ -345,6 +345,7 @@ ModelImporter:
     4300018: char_astrella_helmet
     4300020: char_astrella_body
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Astrella3
     13700002: AstrellaHelmet
     13700004: char_astrella_body

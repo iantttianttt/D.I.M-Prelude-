@@ -87,7 +87,7 @@ namespace DIM {
 				this.status = Status.Prepare;
 				Debug.Log(sceneName.loadingSceneName);
 
-				this.loadOperation = sceneName.isAdditiveLoading ? SceneManager.LoadSceneAsync(sceneName.loadingSceneName) : SceneManager.LoadSceneAsync(sceneName.loadingSceneName);
+				this.loadOperation = sceneName.isAdditiveLoading ? SceneManager.LoadSceneAsync(sceneName.loadingSceneName,LoadSceneMode.Additive) : SceneManager.LoadSceneAsync(sceneName.loadingSceneName,LoadSceneMode.Single);
 
 				yield return this.loadOperation;
 	
@@ -107,7 +107,7 @@ namespace DIM {
 					yield break;
 				}
 
-				this.loadOperation = SceneManager.LoadSceneAsync(sceneName.sceneName);
+				this.loadOperation = SceneManager.LoadSceneAsync(sceneName.sceneName,LoadSceneMode.Single);
 				yield return this.loadOperation;
 
 				this.status = Status.Complete;
