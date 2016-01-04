@@ -44,8 +44,8 @@ namespace DIM {
 					ins = this;
 					GameObject.DontDestroyOnLoad(gameObject);
 
-					if(!string.IsNullOrEmpty(this.sceneNames.initScene)){
-						Application.LoadLevel(this.sceneNames.initScene);
+					if(!string.IsNullOrEmpty(this.sceneNames.initializationScene)){
+						Application.LoadLevel(this.sceneNames.initializationScene);
 					}
 
 				}else if(ins != this){
@@ -82,11 +82,11 @@ namespace DIM {
 
 			private IEnumerator LoadLoadingScene(DIM.LevelLoadingSystem.SceneNames.SceneNameHolder sceneName){
 
-				if(string.IsNullOrEmpty(sceneName.loading)) yield break;
+				if(string.IsNullOrEmpty(sceneName.loadingSceneName)) yield break;
 
 				this.status = Status.Prepare;
 
-				this.loadOperation = sceneName.isAdditiveLoading ? Application.LoadLevelAdditiveAsync(sceneName.loading) : Application.LoadLevelAsync(sceneName.loading);
+				this.loadOperation = sceneName.isAdditiveLoading ? Application.LoadLevelAdditiveAsync(sceneName.loadingSceneName) : Application.LoadLevelAsync(sceneName.loadingSceneName);
 
 				yield return this.loadOperation;
 
@@ -100,13 +100,13 @@ namespace DIM {
 
 				this.status = Status.Loading;
 
-				if(string.IsNullOrEmpty(sceneName.own)){
+				if(string.IsNullOrEmpty(sceneName.sceneName)){
 
 					this.status = Status.None;
 					yield break;
 				}
 
-				this.loadOperation = Application.LoadLevelAsync(sceneName.own);
+				this.loadOperation = Application.LoadLevelAsync(sceneName.sceneName);
 				yield return this.loadOperation;
 
 				this.status = Status.Complete;

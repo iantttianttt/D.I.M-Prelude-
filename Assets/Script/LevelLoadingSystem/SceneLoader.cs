@@ -7,22 +7,27 @@ namespace DIM {
 		public class SceneLoader : MonoBehaviour {
 
 			public enum Scenes{
-				Start = 0,
-				Test1,
-				Test2,
-				Test3
+				Intro = 0,
+				Menu,
+				ShowcaseLevel,
+				UnlimitedLevel,
+				Level_01,
+				Level_02,
+				Level_03,
+				Level_04,
+				Level_05
 			}
 
 			public static SceneLoader ins;
 
-			public Scenes own;
+			public Scenes curSceneName;
 
 			void Awake(){
 				if(ins == null){
 
 					ins = this;
 					GameObject.DontDestroyOnLoad(gameObject);
-					SceneManager.ins.OwnSecne = (int)this.own;
+					SceneManager.ins.OwnSecne = (int)this.curSceneName;
 
 				}else if(ins != this){
 

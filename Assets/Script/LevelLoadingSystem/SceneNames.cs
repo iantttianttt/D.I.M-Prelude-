@@ -5,15 +5,16 @@ using System.Collections;
 namespace DIM {
 	namespace LevelLoadingSystem {
 		
-		public class SceneNames : MonoBehaviour {
+		public class SceneNames : ScriptableObject {
 
-			public string initScene;
+			public string initializationScene;
 			public SceneNameHolder[] scenes;
 
 			[System.Serializable]
 			public class SceneNameHolder{
-				public string own;
-				public string loading;
+				public string sceneName;
+				public int sceneID;
+				public string loadingSceneName;
 				public bool isAdditiveLoading;
 			}
 		}
