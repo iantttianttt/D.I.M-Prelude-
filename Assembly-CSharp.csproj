@@ -93,12 +93,14 @@
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\GUIT_Button_Simple.cs" />
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\GUIText_Color.cs" />
      <Compile Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Demo\Assets\TGPDemo.cs" />
+     <Compile Include="Assets\Script\BeatControlSystem\Enum.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\GameManager.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\Music_AllClass.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\Music_AllEnum.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\Music_AllInterface.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\Music_BeatManager.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\Music_SegmentManager.cs" />
+     <Compile Include="Assets\Script\BeatControlSystem\SongsInfoList.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\UI_AllClass.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\UI_AllEnum.cs" />
      <Compile Include="Assets\Script\BeatControlSystem\UI_BeatDisplayer.cs" />
@@ -107,8 +109,9 @@
      <Compile Include="Assets\Script\LevelLoadingSystem\LoadingScene.cs" />
      <Compile Include="Assets\Script\LevelLoadingSystem\SceneInitializer.cs" />
      <Compile Include="Assets\Script\LevelLoadingSystem\SceneLoader.cs" />
-     <Compile Include="Assets\Script\LevelLoadingSystem\SceneNames.cs" />
+     <Compile Include="Assets\Script\LevelLoadingSystem\SceneNameList.cs" />
      <Compile Include="Assets\Script\TestingScript\SceneLoadingTest.cs" />
+     <Compile Include="Assets\Script\TestingScript\musicDelayPlayTest.cs" />
      <None Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Shaders\TGP_Bump_Rim_OneLight.shader" />
      <None Include="Assets\PlugIn\ToonShader\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_OneLight.shader" />
      <None Include="Assets\PlugIn\Particle Playground\Graphics\Shaders\VertexLit Color.shader" />

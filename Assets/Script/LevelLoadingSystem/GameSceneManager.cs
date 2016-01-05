@@ -15,7 +15,7 @@ namespace DIM {
 
 			public static GameSceneManager ins;
 
-			public SceneNames sceneNames;
+			public SceneNameList sceneNames;
 
 			private Status status;
 			private AsyncOperation loadOperation;
@@ -73,14 +73,14 @@ namespace DIM {
 				this.status = Status.Start;
 			}
 
-			private IEnumerator AsyncLoadScene(DIM.LevelLoadingSystem.SceneNames.SceneNameHolder sceneName){
+			private IEnumerator AsyncLoadScene(DIM.LevelLoadingSystem.SceneNameList.SceneNameHolder sceneName){
 //				Debug.Log("Start");
 				yield return StartCoroutine(this.LoadLoadingScene(sceneName));
 
 				yield return StartCoroutine(this.LoadTargetScene(sceneName));
 			}
 
-			private IEnumerator LoadLoadingScene(DIM.LevelLoadingSystem.SceneNames.SceneNameHolder sceneName){
+			private IEnumerator LoadLoadingScene(DIM.LevelLoadingSystem.SceneNameList.SceneNameHolder sceneName){
 
 				if(string.IsNullOrEmpty(sceneName.loadingSceneName)) yield break;
 
@@ -97,7 +97,7 @@ namespace DIM {
 				}
 			}
 
-			private IEnumerator LoadTargetScene(DIM.LevelLoadingSystem.SceneNames.SceneNameHolder sceneName){
+			private IEnumerator LoadTargetScene(DIM.LevelLoadingSystem.SceneNameList.SceneNameHolder sceneName){
 
 				this.status = Status.Loading;
 
